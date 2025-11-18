@@ -1,0 +1,24 @@
+/**
+ * Margin Muse - Sidebar Styles
+ *
+ * External CSS file for sidebar (injected via content_scripts in manifest)
+ * Note: Most styles will be in Shadow DOM, this is for container positioning
+ */
+
+/* Container positioning - outside Shadow DOM */
+#margin-muse-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 360px;
+  height: 100vh;
+  z-index: 9999;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Collapsed state */
+#margin-muse-sidebar.collapsed {
+  width: 48px;
+}
+
+/* TODO Phase 3: Add any global styles needed outside Shadow DOM */

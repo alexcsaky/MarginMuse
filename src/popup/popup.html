@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Margin Muse Settings</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">
+        <span class="icon">📝</span>
+        <h1>Margin Muse</h1>
+      </div>
+      <p class="tagline">AI-powered writing feedback</p>
+    </div>
+
+    <!-- Settings Form -->
+    <div class="settings">
+      <!-- API Key -->
+      <div class="field">
+        <label for="api-key">Claude API Key</label>
+        <input
+          type="password"
+          id="api-key"
+          placeholder="sk-ant-api03-..."
+          autocomplete="off"
+        />
+        <small class="help-text">
+          Get your API key from <a href="https://console.anthropic.com/" target="_blank">console.anthropic.com</a>
+        </small>
+      </div>
+
+      <!-- Persona Selection -->
+      <div class="field">
+        <label for="persona">Feedback Persona</label>
+        <select id="persona">
+          <option value="Kind Teacher">Kind Teacher</option>
+          <option value="Oxford Professor">Oxford Professor</option>
+          <option value="Socrates">Socrates</option>
+        </select>
+        <small class="help-text">Choose the teaching style for feedback</small>
+      </div>
+
+      <!-- Writing Goals -->
+      <div class="field">
+        <label for="goals">Writing Goals (Optional)</label>
+        <textarea
+          id="goals"
+          rows="3"
+          placeholder="e.g., Write more concisely, improve clarity, use active voice..."
+        ></textarea>
+        <small class="help-text">Tell us what you want to improve</small>
+      </div>
+
+      <!-- Save Button -->
+      <button id="save-btn" class="save-btn">Save Settings</button>
+
+      <!-- Status Message -->
+      <div id="status" class="status"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>Version 0.1.0 (MVP)</p>
+      <div class="links">
+        <a href="https://github.com/alexcsaky/MarginMuse" target="_blank">GitHub</a>
+        <span>•</span>
+        <a href="https://docs.anthropic.com/" target="_blank">API Docs</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

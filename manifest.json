@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Margin Muse",
+  "version": "0.1.0",
+  "description": "AI-powered writing feedback in the style of a thoughtful university tutor",
+
+  "permissions": [
+    "storage"
+  ],
+
+  "host_permissions": [
+    "https://docs.google.com/*"
+  ],
+
+  "background": {
+    "service_worker": "src/background/service-worker.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://docs.google.com/document/*"],
+      "js": ["src/content/content-script.js"],
+      "css": ["src/content/sidebar/sidebar.css"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  }
+}
